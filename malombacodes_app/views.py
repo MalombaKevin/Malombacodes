@@ -7,12 +7,13 @@ from malombacodes_app.models import malombacodes_Post, malombacodes_Profile
 # Create your views here.
 
 
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def index(request):
-    return render(request, 'index.html')
+    posts = malombacodes_Post.objects.all()
+    return render(request, 'index.html', {'posts': posts})
 
 
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def create_profile(request):
     if request.method == 'POST':
         form = Profile_Form(request.POST, request.FILES)
@@ -25,7 +26,7 @@ def create_profile(request):
         form=Profile_Form()
     return render(request, 'add/create_profile.html', {'form':form})
 
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def profile(request):
     if malombacodes_Profile.objects.filter(user_id=request.user.id).exists():
         profile = malombacodes_Profile.objects.get(user_id=request.user.id)
@@ -36,6 +37,7 @@ def profile(request):
         posts= None
     return render(request, 'profile.html')
 
+@login_required(login_url='/accounts/login/')
 def create_post(request):
     if request.method == 'POST':
         form = Post_Form(request.POST, request.FILES)

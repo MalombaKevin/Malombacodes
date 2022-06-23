@@ -10,6 +10,7 @@ class malombacodes_Profile(models.Model):
     twitter = models.URLField(blank=True)
     phone_number = models.CharField(max_length=20, blank=True)
     user= models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    profile_photo = models.ImageField(upload_to='profile_pics/', blank=True)
 
     def __str__(self):
         return self.name
