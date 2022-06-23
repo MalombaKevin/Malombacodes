@@ -2,11 +2,10 @@
 + User should be able to signup/login/signup (done)
 + User should have a profile
 + user should be able to post
-+ 
 + user should be able to search for posts/memes
 + users should be able to follow each other
 + users should be able to comment on a post
-+ Thanos (coding sites infinity stones) 
++ Thanos & Memespot pages for users
 
 # Steps
 + Create and activate virtual environment

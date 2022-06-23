@@ -22,4 +22,4 @@ def create_profile(request):
             return redirect('profile')
     else:
         form=Profile_Form()
-    return render(request, 'create_profile.html')
+    return render(request, 'add/create_profile.html', {'form':form})
