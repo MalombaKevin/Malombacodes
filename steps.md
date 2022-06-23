@@ -5,7 +5,7 @@
 + user should be able to search for posts/memes
 + users should be able to follow each other
 + users should be able to comment on a post
-+ Thanos & Memespot pages for users
++ Thanos, MalombacodesTV & Memespot pages for users
 
 # Steps
 + Create and activate virtual environment
@@ -20,6 +20,18 @@
 + Create the first view function
 + create urls file in the app directory
 + Create a navbar html template and extend it to all templates (Update navigation bar)
+
+ #### Navbar links
+    + Home
+    + About
+    + Contacts
+    + Fun Zone (Malombacodes TV + Memespot)
+    + Profile dropdown
+         + Profile
+         + Add Post
+         + Add Quick Links (link)
+         + Add Meme
+
 + Django registration : create authentication urls in project and forms to login and signup 
 + migrate to database
 + create views for various pages, their urls and templates as well.
@@ -30,6 +42,7 @@
     + Memes
     + search results 
     + Pedia
+    + dev links
 + create a forms.py file in the app directory
 
 #### Profile setup
@@ -42,4 +55,15 @@
     + create a view function for the Profile
     + create a template for the profile
     + create a urls path for the profile
+
+#### Posts setup
+    + create post class in model 
+    + create form to add to post
+    + migrate to database
+    + create a template for the form for adding post
+    + create a view function to add post
+    + create a urls path for the add post
+    + create a view function for the Post
+    + create a template for the post
+    + create a urls path for the post
    

@@ -23,3 +23,8 @@ def create_profile(request):
     else:
         form=Profile_Form()
     return render(request, 'add/create_profile.html', {'form':form})
+
+# @login_required(login_url='/accounts/login/')
+def profile(request):
+    return render(request, 'profile.html')
+

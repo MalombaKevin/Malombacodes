@@ -22,9 +22,9 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;font-weight:900;font-size: larger;"> Hi  <span  style="color:gold;font-weight:900;font-size: larger;" >Hi</span></a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;font-weight:900;font-size: larger;"> Dev {{user.username}}  <span  style="color:gold;font-weight:900;font-size: larger;" ></span></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="">Profile</a></li>
+                        <li><a class="dropdown-item" href="{% url 'profile'%}">Profile</a></li>
                         
                     </ul>
                 </li>
