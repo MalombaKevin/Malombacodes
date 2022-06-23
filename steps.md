@@ -31,10 +31,12 @@
     + Memes
     + search results 
     + Pedia
++ create a forms.py file in the app directory
 
 #### Profile setup
-    + create profile class in model
+    + create profile class in model 
     + create form to add to profile
+    + migrate to database
     + create a template for the form for adding profile
     + create a view function to add profile
     + create a urls path for the add profile
