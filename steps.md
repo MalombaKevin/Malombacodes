@@ -16,7 +16,7 @@
 + Update settings/runtime/procfile files (In readiness for deployment and media upload settings)
 + create a static folder
 + adds .env and .gitignore file
++ setup database variables in the .env and add the file in the .env
 + Create a templates folder in the application directory
 + Create the first view function
 + create urls file in the app directory
-+ setup database variables in the .env
