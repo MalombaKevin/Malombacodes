@@ -1,0 +1,38 @@
+{% load bootstrap4 %}
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Login to Numer[0]</title>
+</head>
+<body> 
+    <div class="container" align="center"><br><br><br>
+            
+            <div class="col-md-6 mt-5" align="center">
+                <form  action="{%url 'login'%}" method="post" enctype="multipart/form-data">
+                    {%csrf_token%}
+                    <div class="header">
+                        <p style="font-size:larger; color:blue;font-weight:bold">Welcome to Third Eye</p> 
+                       </div>
+                    {% bootstrap_form form%}
+                    <div>
+                    <span align="center"><input type="submit" class="btn btn-primary btn-lg" value="Log In"></span>
+                </div>
+                </form><br>
+
+               <h4 style="text-align:center"> Don't have an account?<a href="{% url 'django_registration_register'%}">Sign up</a></h4>
+
+            </div>
+        </div>
+
+        
+    </div>
+    
+</body>
+</html>

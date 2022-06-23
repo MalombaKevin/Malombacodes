@@ -21,7 +21,8 @@
 + Create the first view function
 + create urls file in the app directory
 + Create a navbar html template and extend it to all templates (Update navigation bar)
-+ Django registration : create authentication urls in project and forms to login and signup
++ Django registration : create authentication urls in project and forms to login and signup 
++ migrate to database
 + create views for various pages, their urls and templates as well.
  #### view functions
     + index
