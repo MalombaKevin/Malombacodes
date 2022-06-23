@@ -20,3 +20,5 @@
 + Create a templates folder in the application directory
 + Create the first view function
 + create urls file in the app directory
++ Create a navbar html template and extend it to all templates
++ 
