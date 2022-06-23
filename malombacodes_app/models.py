@@ -21,6 +21,7 @@ class malombacodes_Post (models.Model): #introduce category field
     post_title=models.CharField(max_length=100)
     post_description=models.TextField()
     post_url = models.URLField(blank=True)
+    user= models.OneToOneField(User, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.post_title
