@@ -1,8 +1,8 @@
 # User stories
-+ User should be able to signup/login/signup
++ User should be able to signup/login/signup (done)
 + User should have a profile
 + user should be able to post
-+ Have a memes page
++ 
 + user should be able to search for posts/memes
 + users should be able to follow each other
 + users should be able to comment on a post
@@ -29,5 +29,16 @@
     + Profile
     + Posts
     + Memes
-    + search
+    + search results 
     + Pedia
+
+#### Profile setup
+    + create profile class in model
+    + create form to add to profile
+    + create a template for the form for adding profile
+    + create a view function to add profile
+    + create a urls path for the add profile
+    + create a view function for the Profile
+    + create a template for the profile
+    + create a urls path for the profile
+   
