@@ -74,21 +74,24 @@
 
 
                 <hr>
-                <div class="row">
-                    {% for post in posts %}
-                    <div class="col-md-4" align="center">
-                        <div class="card" style="width:100%; height:10rem">
-                            <div class="card-header">{{post.category}} </div>
-                            <div class="card-body">
-                                <p>{{post.content}}</p>
-
+                <div class="row m-3">
+                    {% for post in posts%}
+                    <div class="col-md-3">
+                        <div class="card" align="center">
+                            <div class="card-header">
+                                {{post.post_title}}
                             </div>
-
-                        </div><br>
+                            <div class="card-body">
+                                {{post.post_description}}
+                            </div>
+                            <div class="card-footer">
+                               <a href="{{post.post_url}}" target="_blank">{{post.post_title}} explained</a>
+                            </div>
+                        </div>
+                      
+            
                     </div>
                     {%endfor%}
-
-                </div>
 
             </div>
         </div>

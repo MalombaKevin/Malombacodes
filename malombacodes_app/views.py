@@ -35,7 +35,7 @@ def profile(request):
     else:
         profile = None
         posts= None
-    return render(request, 'profile.html', {'profile': profile})
+    return render(request, 'profile.html', {'profile': profile, 'posts':posts})
 
 @login_required(login_url='/accounts/login/')
 def create_post(request):
@@ -45,7 +45,7 @@ def create_post(request):
             post=form.save(commit = False)
             post.user=request.user
             post.save()
-            return redirect('profile')
+            return redirect('/')
     else:
         form=Post_Form()
     return render(request, 'add/create_post.html', {'form':form})
