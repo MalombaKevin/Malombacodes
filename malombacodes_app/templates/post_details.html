@@ -24,7 +24,7 @@
         <div class="row m-3">
             {% for post in posts%}
             <div class="col-md-3">
-                <div class="card" align="center" style="height:12rem">
+                <div class="card" align="center">
                     <div class="card-header" style="display:flex; justify-content:space-between">
                         <div>
 
@@ -32,8 +32,6 @@
                         <div>
                             {{post.post_title}}
                             
-
-
                         </div>
 
                         <div>
@@ -55,19 +53,14 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="row">
-                                                
-                                                <div class="col-md-7" >
-                                                  <span style="color:red"> {{post.post_title}}<br>
-                                                    {{post.post_description}}
-                                                    <a href="{{post.youtube_url}}">Click me</a>
-                                                    </span>
-                                                  
-                                                  
-                                                   
+                                                {{post.youtube_url}}
+                                                <div class="col-md-7">
+                                                    <iframe width="560" height="315" src="{{post.youtube_url}}"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowfullscreen></iframe>
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <iframe width="560" height="315" src="{{post.youtube_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                   
 
                                                 </div>
                                             </div>
@@ -89,10 +82,11 @@
                     </div>
 
                     <div class="card-body">
-                        {{post.post_description | slice:":50"}}...
+                        {{post.post_description}}
                     </div>
                     <div class="card-footer">
-                        <a href="" style="text-decoration:none; font-weight:900"> By {{post.user.username}}</a>
+                        <a href="{{post.site_url}}" target="_blank" style="text-decoration:none; font-weight:900">Quick
+                            Link</a>
                     </div>
                 </div>
 

@@ -1,1 +1,1 @@
-web: gunicorn third_eye.wsgi --log-file -
+web: gunicorn malombacodes.wsgi --log-file -

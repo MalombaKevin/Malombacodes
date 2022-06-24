@@ -20,8 +20,11 @@ class malombacodes_Profile(models.Model):
 
 class malombacodes_Post (models.Model): #introduce category field
     post_title=models.CharField(max_length=100)
-    post_description=models.TextField()
-    post_url = models.URLField(blank=True)
+    post_description=models.TextField(max_length=100, blank=True)
+    notes = models.TextField(max_length=500, blank=True)
+    site_name=models.CharField(max_length=100,blank=True)
+    site_url  = models.URLField(blank=True)
+    youtube_url = models.URLField(blank=True)
     user= models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     def __str__(self):

@@ -10,5 +10,5 @@ class Profile_Form(forms.ModelForm):
 class Post_Form(forms.ModelForm):
     class Meta:
         model=malombacodes_Post
-        fields=['post_title','post_description','post_url']
+        fields=['post_title','post_description','notes','site_name','site_url', 'youtube_url']
         exclude=['user']
