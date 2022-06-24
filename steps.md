@@ -1,13 +1,16 @@
 # User stories
+
 + User should be able to signup/login/signup (done)
-+ User should have a profile
++ User should have a profile (done)
 + user should be able to post
 + user should be able to search for posts/memes
 + users should be able to follow each other
 + users should be able to comment on a post
-+ Thanos, MalombacodesTV & Memespot pages for users
++ superlinks, MalombacodesTV & Memespot pages for users 
++ Programming languages / Roadmap to proficiency
 
 # Steps
+
 + Create and activate virtual environment
 + Install dependanceies from requirement.txt
 + Create django project
@@ -22,10 +25,11 @@
 + Create a navbar html template and extend it to all templates (Update navigation bar)
 
  #### Navbar links
+
     + Home
     + About
     + Contacts
-    + Fun Zone (Malombacodes TV + Memespot)
+    + Fun Zone (MalombacodesTV + Memespot, Motivation)
     + Profile dropdown
          + Profile
          + Add Post
@@ -36,16 +40,18 @@
 + migrate to database
 + create views for various pages, their urls and templates as well.
  #### view functions
+
     + index
     + Profile
     + Posts
     + Memes
     + search results 
     + Pedia
-    + dev links
+    + dev tools
 + create a forms.py file in the app directory
 
 #### Profile setup
+
     + create profile class in model 
     + create form to add to profile
     + migrate to database
@@ -55,8 +61,10 @@
     + create a view function for the Profile
     + create a template for the profile
     + create a urls path for the profile
+    + enable update profile
 
 #### Posts setup
+
     + create post class in model 
     + create form to add to post
     + migrate to database
@@ -66,4 +74,6 @@
     + create a view function for the Post
     + create a template for the post
     + create a urls path for the post
+    + enable delete post
+    + enable edit post
    
