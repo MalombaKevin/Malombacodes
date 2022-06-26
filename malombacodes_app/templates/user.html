@@ -9,7 +9,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/9c5f6822d9.js" crossorigin="anonymous"></script>
 
-    <title>Hi {{user.username}}</title>
+    <title>{{profile.user.username}}'s profile</title>
 
 </head>
 
@@ -35,7 +35,7 @@
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">
-                       My Portfolio
+                     {{profile.user.username}}'s Portfolio
                     </button>
 
                     <!-- Modal -->

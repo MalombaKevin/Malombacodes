@@ -8,6 +8,7 @@
 + users should be able to comment on a post
 + superlinks, MalombacodesTV & Memespot pages for users 
 + Programming languages / Roadmap to proficiency
++ coding communities
 
 # Steps
 
@@ -77,3 +78,16 @@
     + enable delete post
     + enable edit post
    
+#### Memes setup
+
+    + create meme class in model 
+    + create form to add to meme
+    + migrate to database
+    + create a template for the form for adding meme
+    + create a view function to add meme
+    + create a urls path for the add meme
+    + create a view function for the Meme
+    + create a template for the meme
+    + create a urls path for the meme
+    + enable delete meme
+    + enable edit meme

@@ -32,3 +32,15 @@ class malombacodes_Post (models.Model): #introduce category field
     
     def malombacode_save(self):
         self.save()
+
+class Memes(models.Model):
+    meme_title = models.CharField(max_length=100)
+    meme_description=models.TextField(max_length=100 )
+    meme_image = models.ImageField(upload_to='memes/')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.meme_title
+
+    def malombacode_save(self):
+        self.save()
