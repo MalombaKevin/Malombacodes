@@ -9,6 +9,7 @@
 + superlinks, MalombacodesTV & Memespot pages for users 
 + Programming languages / Roadmap to proficiency
 + coding communities
++ on registration user should receive an email
 
 # Steps
 
@@ -91,3 +92,7 @@
     + create a urls path for the meme
     + enable delete meme
     + enable edit meme
+
+#### Search
+    + create a search function in the models
+    + create a template where search results will be rendered

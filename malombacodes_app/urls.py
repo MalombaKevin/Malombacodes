@@ -15,6 +15,7 @@ urlpatterns=[
     path('memes/', views.memes, name='memes'),
     path('malombacoders/', views.all_users, name='malombacoders'),
     path('malombacoder/<int:id>', views.user, name='malombacoder'),
+    path('update-profile/<int:id>', views.update_profile, name='update_profile'),
 ]
 
 if settings.DEBUG:

@@ -10,7 +10,6 @@
     <script src="https://kit.fontawesome.com/9c5f6822d9.js" crossorigin="anonymous"></script>
 
     <title>Malombacodes|Home</title>
-</head>
 
 <body>
     {% include 'navbar.html'%}
@@ -18,6 +17,15 @@
         <h3 style="background-color:blueviolet;color:gold; font-weight:900"><a href=""
                 style="background-color:blueviolet;color:gold; font-weight:900; text-decoration: none;">MalombacodesTV</a>
         </h3>
+    </div>
+
+    <div class='container' align="center">
+        <form action="">
+            <input type="search" class="form-control" name="title" id="title" placeholder="search malombacodes"
+                style="border:none;border-bottom:chartreuse solid;width:50%;outline:none;background-color:transparent; font-size:large"><br><br>
+
+        </form>
+
     </div>
     <div class="container">
 
@@ -31,19 +39,19 @@
                         </div>
                         <div>
                             {{post.post_title}}
-                            
+
 
 
                         </div>
 
                         <div>
                             <!-- Button trigger modal -->
-                            <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="View">
+                            <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{post.id}}" title="View">
                                 <i class="fa-solid fa-maximize"></i>
                             </a>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                            <div class="modal fade" id="staticBackdrop{{post.id}}" data-bs-backdrop="static"
                                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                 aria-hidden="true">
                                 <div class="modal-dialog modal-xl">
@@ -55,21 +63,26 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="row">
-                                                
-                                                <div class="col-md-7" >
-                                                  <span style="color:red"> {{post.post_title}}<br>
-                                                    {{pos.post_description}}
-                                                    <a href="{{post.youtube_url}}">Click me</a>
-                                                    </span>
-                                                  
-                                                  
-                                                   
-                                                </div>
-                                                <div class="col-md-5">
-                                                    <iframe width="560" height="315" src="{{post.youtube_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                   
+                                                <div class="col-md-7">
+                                                    <iframe width="100%" height="315" src="{{post.youtube_url}}"
+                                                        title="YouTube video player" frameborder="0"
+                                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                        allowfullscreen></iframe>
+
 
                                                 </div>
+
+                                                <div class="col-md-5" style="text-align: left;">
+                                                    <span> {{post.post_title}}<br>
+                                                        {{post.post_description}}<br><br>
+                                                        <p>{{post.site_name}}</p>
+                                                        <a href="{{post.youtube_ur}}">Click me</a>
+                                                    </span>
+
+
+
+                                                </div>
+                                                
                                             </div>
 
                                         </div>
@@ -92,7 +105,8 @@
                         {{post.post_description | slice:":50"}}...
                     </div>
                     <div class="card-footer">
-                        <a href="" style="text-decoration:none; font-weight:900"> By {{post.user.username}}</a>
+                        <a href="{% url 'malombacoder' post.user.id%}" style="text-decoration:none; font-weight:900"> By
+                            {{post.user.username}}</a>
                     </div>
                 </div>
 

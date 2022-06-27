@@ -39,6 +39,21 @@ def profile(request):
     return render(request, 'profile.html', {'profile': profile, 'posts':posts})
 
 @login_required(login_url='/accounts/login/')
+def update_profile(request, id):
+    profile = malombacodes_Profile.objects.get(user_id=id)
+    form = Profile_Form(instance=profile)
+
+    if request.method == 'POST':
+        form = Profile_Form(request.POST,instance=profile)
+    
+        if form.is_valid():
+                form.save()
+                return redirect('/profile')
+ 
+   
+    return render(request, 'update/update_profile.html', {'form':form})
+
+@login_required(login_url='/accounts/login/')
 def create_post(request):
     if request.method == 'POST':
         form = Post_Form(request.POST, request.FILES)
@@ -84,3 +99,6 @@ def user(request,id):
         profile = None
         posts= None
     return render(request, 'user.html', {'profile': profile, 'posts':posts})
+
+
+# search functions

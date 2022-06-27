@@ -24,12 +24,20 @@
             <div class="col-md-3 ">
 
 
-                <img src="{{profile.profile_photo.url}}" style="height:20rem;width:100%">
+                <img src="{{profile.profile_photo.url}}" style="height:20rem;width:100%"><br>
 
                 <span style="font-size:large; font-weight:800">{{profile.name}}</span><br>
                 <span>@{{user.username}}</span>
 
-                <p> {{profile.bio}}</p>
+                <p>{{profile.bio}}</p>
+                <a href="{%url 'update_profile' profile.id%}"  title="Profile Settings" class="btn btn-outline-dark" style="width:100%"> Edit Profile</a><br>
+                
+                <br><a href="{{profile.github}}" target="blank" title="Github"> <i class="fa-brands fa-github" style="font-size: xx-large;color:black"></i></a>&nbsp;&nbsp;
+                <a href="{{profile.linkedin}}" target="_blank"> <i class="fa-brands fa-linkedin" style="font-size:xx-large;color:blueviolet"></i></a>&nbsp;&nbsp;
+                <a href="{{profile.github}}"> <i class="fa-solid fa-envelope" style="font-size:xx-large;color:red"></i></a>
+               
+                <br>
+                <hr>
                 <div class="modals">
 
                     <!-- Button trigger modal -->
@@ -41,14 +49,14 @@
                     <!-- Modal -->
                     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="staticBackdropLabel"></h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body ">
 
                                 </div>
                                 <div class="modal-footer">

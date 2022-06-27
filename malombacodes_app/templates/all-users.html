@@ -14,10 +14,13 @@
 
 <body>
     {% include 'navbar.html'%}
-    <div align="center">
-        <h3 style="background-color:blueviolet;color:gold; font-weight:900"><a href=""
-                style="background-color:blueviolet;color:gold; font-weight:900; text-decoration: none;">MalombacodesTv</a>
-        </h3>
+    <div class='container' align="center">
+        <form  action="">
+            <input type="search" class="form-control"  name="title" id="title" placeholder="find a malombacoder"
+                style="border:none;border-bottom:chartreuse solid;width:50%;outline:none;background-color:transparent; font-size:large"><br><br>
+                
+        </form>
+
     </div>
     <div class="container-fluid">
 
@@ -49,7 +52,7 @@
                         <a href="{% url 'malombacoder' profile.user.id%}">View</a>
                     </div>
                    
-                </div>
+                </div> <br>
 
 
             </div>

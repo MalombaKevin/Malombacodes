@@ -14,17 +14,22 @@
 
 <body>
     {% include 'navbar.html'%}
-    <div align="center">
-        <h3 style="background-color:blueviolet;color:gold; font-weight:900"><a href=""
-                style="background-color:blueviolet;color:gold; font-weight:900; text-decoration: none;">MalombacodesTv</a>
-        </h3>
+   
+    <div class='container mt-1' align="center">
+        <form  action="">
+            <input type="search" class="form-control"  name="title" id="title" placeholder="find a meme"
+                style="border:none;border-bottom:chartreuse solid;width:50%;outline:none;background-color:transparent; font-size:large"><br><br>
+                
+        </form>
+
     </div>
+    
     <div class="container-fluid">
 
         <div class="row m-3">
             {% for meme in memes%}
-            <div class="col-md-2 m-4">
-                <div class="card" align="center" style="width:20rem">
+            <div class="col-md-2" >
+                <div class="card" align="center" style="width:18rem">
                     <div class="card-header" style="display:flex; justify-content:space-between">
                         <div>
 
@@ -38,12 +43,12 @@
 
                         <div>
                             <!-- Button trigger modal -->
-                            <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" title="View">
+                            <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{meme.id}}" title="View">
                                 <i class="fa-solid fa-maximize"></i>
                             </a>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                            <div class="modal fade" id="staticBackdrop{{meme.id}}" data-bs-backdrop="static"
                                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                 aria-hidden="true">
                                 <div class="modal-dialog modal-xl">
@@ -57,24 +62,18 @@
                                             <div class="row">
                                                 
                                                 <div class="col-md-7" >
-                                                  <span style="color:red"> {{post.post_title}}<br>
-                                                    {{pos.post_description}}
-                                                    <a href="{{post.youtube_url}}">Click me</a>
-                                                    </span>
-                                                  
-                                                  
+                                                  <img src="{{meme.meme_image.url}}" style="height:40rem;width:100%">
                                                    
                                                 </div>
-                                                <div class="col-md-5">
-                                                    <iframe width="560" height="315" src="{{post.youtube_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                   
+                                                <div class="col-md-5 mt-3" style="text-align:left">
+                                                    <span style="font-weight:900">{{meme.user.username}}</span>: <span>{{meme.meme_description}}</span>
 
                                                 </div>
                                             </div>
 
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
+                                            <button type="button" class="btn btn-primary"
                                                 data-bs-dismiss="modal">Close</button>
 
                                         </div>
@@ -89,12 +88,12 @@
                     </div>
 
                     <div>
-                        <img src="{{meme.meme_image.url}}" style="width: 100%; height:20rem">
+                        <img src="{{meme.meme_image.url}}" style="width: 100%; height:18rem">
                     </div>
                     <div class="card-footer">
                         <a href="{% url 'malombacoder' meme.user.id%}" style="text-decoration:none; font-weight:900"> By {{meme.user.username}}</a>
                     </div>
-                </div>
+                </div><br>
 
 
             </div>

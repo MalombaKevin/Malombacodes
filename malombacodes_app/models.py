@@ -44,3 +44,4 @@ class Memes(models.Model):
 
     def malombacode_save(self):
         self.save()
+
